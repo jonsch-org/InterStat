@@ -1,8 +1,8 @@
 # InterStat
 
 <b><h3>Supported devices/OS</h3></b>
-<b>Cisco (IOS, IOS-XE, NX-OS)</b><br>
-<b>Dell (FTOS)</b><br>  
+Cisco (IOS, IOS-XE, NX-OS)<br>
+<b>Dell (FTOS)</b> 
 
 
 <b><h3>What is InterStat?</h3></b>
