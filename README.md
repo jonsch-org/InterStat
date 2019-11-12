@@ -1,8 +1,19 @@
 # InterStat
 
-<b><h3>Explanation</h3></b>
+<b><h3>What is InterStat?</h3></b>
 <b>InterStat</b> is a simple python script for saving the output of the current interface status from a list of devices. It is using the libary paramiko for building up a ssh connection to the network devices (switches, routers,...) which are defined in a list of ip adresses.
 
 After successful connection to a device, the script collect some device informations like privilege mode, paging, brand hostname and of course the interface status. The device information will just printed out to the command line and only the interface status output will be saved to a file called the hostname of the device.
 
-<code>kinkln</code>
+<b><h3>How to use</h3></b>
+Before you can start the script you have to change some parameters. There are three variables you have to look for.
+
+<b><h4>1. SSH-Port </h4></b>
+By default the ssh port is <b>22</b>. If you want to take another port for the ssh connection, you have to edit the <code><b>line 33</b></code> which defines the ssh port. Change the <b>22</b> to the port you prefer.
+
+<code>port = ('22')</code>
+
+<b><h4>2. Destination path </h4></b>
+By default the destination path is <b>G:/InterStat/</b>. Normally you want to costumize the path where the files should be saved. In this reason you have to edit the <code><b>line 36</b></code> which defines the path to the destination directory. Change the 22 to the port you prefer.
+
+<code>port = ('22')</code>
