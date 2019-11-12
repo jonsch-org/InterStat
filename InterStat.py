@@ -6,22 +6,41 @@ import sys
 import re
 import signal
 
+print ('')
+print ('')
+print ('************************************')
+print ('**                                **')
+print ('**   InterStat.py by jonsch.org   **')
+print ('**                                **')
+print ('************************************')
+print ('')
+print ('')
+
 
 #define active directory credentials
+print ('Your active directory credentials')
 adUsername = input('AD-Username: ')
 adPassword = getpass.getpass('AD-Password: ')
+print ('')
 
 #define local credentials
+print ('Your local credentials')
 locUsername = input('Local-Username: ')
 locPassword = getpass.getpass('Local-Password: ')
+print ('')
+
+#define privilege (ena) credential
+print ('The privilege (ena) credential')
+enaPassword = input('Ena-Password: ')
+print ('')
 
 #define ssh port
 port = ('22')
 
-#define path of directory
+#path directory
 path = (r'G:/InterStat/')
 
-#ip list of devices
+#ip list
 with open('ip_list.txt', 'r') as ip:
         ip_list = ip.read().split('\n')
 
@@ -63,7 +82,7 @@ def getStatus():
                     print ('# Trying to log in privilege mode')
                     ssh.slave.send('ena\n')
                     time.sleep(1)
-                    ssh.slave.send(locPassword)
+                    ssh.slave.send(enaPassword)
                     ssh.slave.send('\n')
                     time.sleep(1)
                     enaOutput = ssh.slave.recv(9999).decode('UTF-8')
@@ -161,7 +180,7 @@ def getStatus():
                     print ('# Trying to log in privilege mode')
                     ssh.slave.send('ena\n')
                     time.sleep(1)
-                    ssh.slave.send(locPassword)
+                    ssh.slave.send(enaPassword)
                     ssh.slave.send('\n')
                     time.sleep(1)
                     enaOutput = ssh.slave.recv(9999).decode('UTF-8')
