@@ -21,7 +21,7 @@ By default the destination path is <b>"G:/InterStat/"</b>. Normally you want to 
 <b><h4>3. IP-List </h4></b>
 By default the ip list for the devices is named <b>"ip_list.txt</b>. Maybe you want to rename the filename. For this case you have to edit the <code><b>line 39</b></code>, <code><b>line 40</b></code> and <code><b>line 52</b></code> which defines the the filename. Change the filename <b>"ip_list.txt</b> you prefer.
 
-<code>with open('ip_list.txt', 'r') as ip:</code>>br>
+<code>with open('ip_list.txt', 'r') as ip:</code><br>
 and<br>
 <code>ip_list = ip.read().split('\n')</code><br>
 and<br>
