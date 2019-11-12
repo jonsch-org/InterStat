@@ -40,4 +40,7 @@ After you changed the parameters and the directories are defined, you can start 
 
 4. The script will disable the paging function to get the maximum output.
 
-5. To get the hostname of the device the script will find out with the <b>show version</b> command, which brand the device is of. By default the brand could be cisco (IOS, IOS-XE, NX-OS, ...) and dell (Force 10). Depending on which one, the script will ask for the <b>show run | include hostname</b> or <b>show run | find hostname</b> 
+5. To get the hostname of the device the script will find out with the <b>show version</b> command, which brand the device is of. By default the brand could be cisco (IOS, IOS-XE, NX-OS, ...) and dell (Force 10). Depending on which one, the script will prompt the <b>show run | include hostname</b> or <b>show run | find hostname</b> command to pick out the hostname of the device.
+
+6. After that the main function will start his work. The interface status command will be promt and the output will be saved to a textfile with the hostname fo the device as filename to the directory you defined at the start. If this succeed the script will pick up the next ip address of the ip list and repeat the process.
+
