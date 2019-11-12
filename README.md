@@ -1,5 +1,9 @@
 # InterStat
 
+<b><h3>Supported devices/OS</h3></b><br>
+<b>Cisco (IOS, IOS-XE, NX-OS)</b><br>
+<b>Dell (FTOS)</b><br>  
+
 <b><h3>What is InterStat?</h3></b>
 <b>InterStat</b> is a simple python script for saving the output of the current interface status from a list of devices. It is using the libary paramiko for building up a ssh connection to the network devices (switches, routers,...) which are defined in a list of ip adresses.
 
