@@ -22,8 +22,8 @@ port = ('22')
 path = (r'G:/InterStat/')
 
 #ip list of devices
-with open('ip_list_messer.txt', 'r') as ip:
-        ip_list_messer = ip.read().split('\n')
+with open('ip_list.txt', 'r') as ip:
+        ip_list = ip.read().split('\n')
 
 #graceful handling of keyboardInterruption
 def signal_handler(signal, frame):
@@ -35,7 +35,7 @@ signal.signal(signal.SIGINT, signal_handler)
 
 #main programm
 def getStatus():
-    for ip in ip_list_messer:
+    for ip in ip_list:
         try:
             print ('# Trying to log in to %s' % (ip))
             #create ssh session with active directory credentials
