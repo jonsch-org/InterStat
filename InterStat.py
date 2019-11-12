@@ -31,7 +31,7 @@ print ('')
 
 #define privilege (ena) credential
 print ('The privilege (ena) credential')
-enaPassword = input('Ena-Password: ')
+enaPassword = getpass.getpass('Ena-Password: ')
 print ('')
 
 #define ssh port
