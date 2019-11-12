@@ -5,7 +5,7 @@
 
 After successful connection to a device, the script collect some device informations like privilege mode, paging, brand hostname and of course the interface status. The device information will just printed out to the command line and only the interface status output will be saved to a file called the hostname of the device.
 
-<b><h3>How to use</h3></b>
+<b><h3>How to use?</h3></b>
 Before you can start the script you have to change some parameters. There are three variables you have to look for.
 
 <b><h4>1. SSH-Port </h4></b>
@@ -26,3 +26,13 @@ and<br>
 <code>ip_list = ip.read().split('\n')</code><br>
 and<br>
 <code>for ip in ip_list:</code><br>
+
+<b><h3>Step by Step</h3></b>
+After you changed the parameters and the directories are defined, you can start the script.
+
+First of all you get asked for your credentials to login to the device. There are two options to login. The first credentials you will get asked are your active directory once if you are using RADIUS or any other kind of authentication process. If you are just using local credentials on each device or your active directory login fails, the script will use your local account.  
+
+After login the script will open in a for loop the ip list and pick the ip address of the first line. In the next step the ssh connection to the device will be build up. The first try of login will be with the active directory credentials and after that with the local credentials. 
+
+In the next step the InterStat.py check if you are still in privilege mode, if not the login will be tried with the ena password you defined at the start.
+
