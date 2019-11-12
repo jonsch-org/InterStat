@@ -232,5 +232,5 @@ def getStatus():
                 print ('')
             writeStat()
             ssh.close()
-    print ('Script ran successfully. Script closed.')
+    print ('Script ran successfully, script closed')
 getStatus()
