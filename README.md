@@ -12,7 +12,7 @@ After successful connection to a device, the script collect some device informat
 
 
 <b><h3>How to use?</h3></b>
-Before you can start the script you have to change some parameters. There are three variables you have to look for.
+Before you can start the script, you have to change some parameters. There are three variables you have to look for.
 
 <b><h4>1. SSH-Port </h4></b>
 By default the ssh port is <b>22</b>. If you want to take another port for the ssh connection, you have to edit the <code><b>line 38</b></code> which defines the ssh port. Change the <b>22</b> to the port you prefer.
