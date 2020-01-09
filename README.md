@@ -37,9 +37,7 @@ and<br>
 <b><h3>Step by Step</h3></b>
 After you changed the parameters and the directories are defined, you can start the script.
 
-1. First of all you get asked for your credentials to login to the device. There are two options to login. The first credentials you will get asked are your active directory once if you are using RADIUS or any other kind of authentication process. If you are just using local credentials on each device or your active directory login fails, the script will use your local account.  
-
-If the script can not reach or connect to the device, the destination device will be skipeped and the next IP address will be used. If the authentication with AD and local credentials will fail, the script will also skip this IP address and the next one will be used.
+1. First of all you get asked for your credentials to login to the device. There are two options to login. The first credentials you will get asked are your active directory once if you are using RADIUS or any other kind of authentication process. If you are just using local credentials on each device or your active directory login fails, the script will use your local account.  If the script can not reach or connect to the device, the destination device will be skipped and the next IP address will be used. If the authentication with AD and local credentials will fail, the script will also skip this IP address and the next one will be used.
 
 2. After login the script will open in a for loop the ip list and pick the ip address of the first line. In the next step the ssh connection to the device will be build up. The first try of login will be with the active directory credentials and after that with the local credentials. 
 
